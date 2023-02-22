@@ -14,7 +14,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Corals\\Modules\\shortener\\": "src"
+            "Corals\\Modules\\Shortener\\": "src"
         }
     },
     "autoload-dev": {

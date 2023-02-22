@@ -69,6 +69,6 @@ class ShortenerServiceProvider extends BasePackageServiceProvider
 
     public function registerModulesPackages()
     {
-        Modules::addModulesPackages('corals/advert');
+        Modules::addModulesPackages('corals/shortener');
     }
 }
