@@ -1,0 +1,18 @@
+{
+    "code": "corals-shortener",
+    "name": "URL Shortener Module",
+    "author": "Corals",
+    "type": "module",
+    "description": "Starter Package",
+    "namespace": "Corals\\Modules\\Shortener\\",
+    "provider": "ShortenerServiceProvider",
+    "version": "1.0.1",
+    "load_order": "0",
+    "folder": "Shortener",
+    "autoload": "psr-4",
+    "icon": "fa fa-ellipsis-h",
+    "require": {
+    },
+    "platform": "",
+    "supported_platforms": []
+}
