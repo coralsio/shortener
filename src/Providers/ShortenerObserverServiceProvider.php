@@ -13,7 +13,6 @@ class ShortenerObserverServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
         Link::observe(LinkObserver::class);
     }
 }

@@ -27,11 +27,12 @@ class ShortenerMenuDatabaseSeeder extends Seeder
             'icon' => 'fa fa-ellipsis-h',
             'target' => null,
             'roles' => '["1","' . $shortenerClientRole->id . '"]',
-            'order' => 0
+            'order' => 0,
         ]);
 
         // seed children menu
-        DB::table('menus')->insert([
+        DB::table('menus')->insert(
+            [
                 [
                     'parent_id' => $shortener_menu_id,
                     'key' => null,
@@ -42,7 +43,7 @@ class ShortenerMenuDatabaseSeeder extends Seeder
                     'icon' => 'fa fa-globe',
                     'target' => null,
                     'roles' => '["1"]',
-                    'order' => 0
+                    'order' => 0,
                 ],
                 [
                     'parent_id' => $shortener_menu_id,
@@ -54,7 +55,7 @@ class ShortenerMenuDatabaseSeeder extends Seeder
                     'icon' => 'fa fa-link',
                     'target' => null,
                     'roles' => '["1","' . $shortenerClientRole->id . '"]',
-                    'order' => 0
+                    'order' => 0,
                 ],
                 [
                     'parent_id' => $shortener_menu_id,
@@ -66,7 +67,7 @@ class ShortenerMenuDatabaseSeeder extends Seeder
                     'icon' => 'fa fa-list',
                     'target' => null,
                     'roles' => '["1"]',
-                    'order' => 0
+                    'order' => 0,
                 ],
 
                 [
@@ -79,7 +80,7 @@ class ShortenerMenuDatabaseSeeder extends Seeder
                     'icon' => 'fa fa-th',
                     'target' => null,
                     'roles' => '["1"]',
-                    'order' => 0
+                    'order' => 0,
                 ],
             ]
         );

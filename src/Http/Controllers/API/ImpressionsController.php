@@ -28,5 +28,4 @@ class ImpressionsController extends BaseController
     {
         return $this->impressionService->click($request, $codeLink);
     }
-
 }

@@ -4,7 +4,6 @@ namespace Corals\Modules\Shortener\Transformers\API;
 
 use Corals\Foundation\Transformers\APIBaseTransformer;
 use Corals\Modules\Shortener\Models\Link;
-use Illuminate\Support\Arr;
 
 class LinkTransformer extends APIBaseTransformer
 {

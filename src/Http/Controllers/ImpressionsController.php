@@ -15,7 +15,6 @@ class ImpressionsController extends BaseController
 
     public function __construct(ImpressionService $impressionService)
     {
-
         $this->corals_middleware_except = array_merge($this->corals_middleware, ['click']);
 
         $this->impressionService = $impressionService;
@@ -49,5 +48,4 @@ class ImpressionsController extends BaseController
     {
         return $this->impressionService->click($request, $codeLink);
     }
-
 }

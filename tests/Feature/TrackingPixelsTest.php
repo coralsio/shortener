@@ -28,7 +28,8 @@ class TrackingPixelsTest extends TestCase
     {
         $providers = config('shortener.models.tracking_pixel.providers');
         $provider = array_rand($providers);
-        $response = $this->post('shortener/tracking-pixels',
+        $response = $this->post(
+            'shortener/tracking-pixels',
             [
                 'name' => 'tracking_pixel',
                 'provider' => $provider,
@@ -70,7 +71,7 @@ class TrackingPixelsTest extends TestCase
             $response = $this->put('shortener/tracking-pixels/' . $this->trackingPixel->hashed_id, [
                 'name' => $this->trackingPixel->name,
                 'provider' => $this->trackingPixel->provider,
-                'status' => $this->trackingPixel->status
+                'status' => $this->trackingPixel->status,
             ]);
 
             $response->assertRedirect('shortener/tracking-pixels');

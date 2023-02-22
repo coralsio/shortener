@@ -25,7 +25,8 @@ class LinkTransformer extends BaseTransformer
     {
         $parameters = array_merge(['name' => 'value'], array_combine(
             Arr::pluck($link->parameters ?? [], 'key'),
-            Arr::pluck($link->parameters ?? [], 'value')));
+            Arr::pluck($link->parameters ?? [], 'value')
+        ));
 
         $transformedArray = [
             'id' => $link->id,
@@ -38,7 +39,7 @@ class LinkTransformer extends BaseTransformer
             'expired_at' => $link->expired_at ? format_date($link->expired_at) : '-',
             'created_at' => format_date($link->created_at),
             'updated_at' => format_date($link->updated_at),
-            'action' => $this->actions($link)
+            'action' => $this->actions($link),
         ];
 
         return parent::transformResponse($transformedArray);

@@ -27,7 +27,8 @@ class LinksTest extends TestCase
     public function test_links_store()
     {
         $url = 'https://links';
-        $response = $this->post('shortener/links',
+        $response = $this->post(
+            'shortener/links',
             [
                 'url' => $url,
                 'status' => 'active',
@@ -75,7 +76,7 @@ class LinksTest extends TestCase
         if ($this->link) {
             $response = $this->put('shortener/links/' . $this->link->hashed_id, [
                 'url' => $this->link->url,
-                'status' => $this->link->status
+                'status' => $this->link->status,
             ]);
 
             $response->assertRedirect('shortener/links');

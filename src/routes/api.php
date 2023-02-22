@@ -1,6 +1,6 @@
 <?php
 
-use \Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'shortener'], function () {
     Route::get('click/{code}', 'ImpressionsController@click');

@@ -45,7 +45,7 @@ class LinksController extends BaseController
         $link = new Link();
 
         $this->setViewSharedData([
-            'title_singular' => trans('Corals::labels.create_title', ['title' => $this->title_singular])
+            'title_singular' => trans('Corals::labels.create_title', ['title' => $this->title_singular]),
         ]);
 
         return view('Shortener::links.create_edit')->with(compact('link'));
@@ -91,7 +91,7 @@ class LinksController extends BaseController
     public function edit(LinkRequest $request, Link $link)
     {
         $this->setViewSharedData([
-            'title_singular' => trans('Corals::labels.update_title', ['title' => $this->title_singular])
+            'title_singular' => trans('Corals::labels.update_title', ['title' => $this->title_singular]),
         ]);
 
         return view('Shortener::links.create_edit')->with(compact('link'));
@@ -127,7 +127,7 @@ class LinksController extends BaseController
 
             $message = [
                 'level' => 'success',
-                'message' => trans('Corals::messages.success.deleted', ['item' => $this->title_singular])
+                'message' => trans('Corals::messages.success.deleted', ['item' => $this->title_singular]),
             ];
         } catch (\Exception $exception) {
             log_exception($exception, Link::class, 'destroy');

@@ -19,15 +19,15 @@ return [
             'actions' => [
                 'edit' => [],
                 'delete' => [],
-            ]
+            ],
         ],
         'tracking_pixel' => [
             'presenter' => \Corals\Modules\Shortener\Transformers\TrackingPixelPresenter::class,
             'resource_url' => 'shortener/tracking-pixels',
             'providers' => [
                 'GTM' => 'Google Tag Manager',
-                'FB' => 'Facebook Pixel'
-            ]
-        ]
-    ]
+                'FB' => 'Facebook Pixel',
+            ],
+        ],
+    ],
 ];

@@ -6,7 +6,6 @@ use Corals\Foundation\Transformers\FractalPresenter;
 
 class ShortDomainPresenter extends FractalPresenter
 {
-
     /**
      * @return ShortDomainTransformer
      */

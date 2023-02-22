@@ -33,7 +33,7 @@ class LinkRequest extends BaseRequest
             $rules = array_merge($rules, [
                 'expired_at' => 'nullable|date',
                 'status' => 'required',
-                'url' => 'required|url'
+                'url' => 'required|url',
             ]);
         }
 

@@ -58,14 +58,14 @@ class ShortDomainsDataTable extends BaseDataTable
                 'class' => 'col-md-2',
                 'type' => 'text',
                 'condition' => 'like',
-                'active' => true
+                'active' => true,
             ],
             'base_url' => [
                 'title' => trans('Shortener::attributes.shortDomain.base_url'),
                 'class' => 'col-md-2',
                 'type' => 'text',
                 'condition' => 'like',
-                'active' => true
+                'active' => true,
             ],
         ];
     }

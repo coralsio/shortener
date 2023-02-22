@@ -2,7 +2,6 @@
 
 namespace Corals\Modules\Shortener\Services;
 
-
 use Corals\Foundation\Services\BaseServiceClass;
 use Corals\Modules\Shortener\Models\Link;
 use Illuminate\Http\Request;

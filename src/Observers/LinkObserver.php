@@ -6,7 +6,6 @@ use Corals\Modules\Shortener\Models\Link;
 
 class LinkObserver
 {
-
     /**
      * @param Link $link
      */

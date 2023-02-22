@@ -14,7 +14,8 @@ use Spatie\Activitylog\Traits\LogsActivity;
 
 class Link extends BaseModel
 {
-    use PresentableTrait, LogsActivity;
+    use PresentableTrait;
+    use LogsActivity;
 
     /**
      *  Model configuration.
@@ -48,11 +49,16 @@ class Link extends BaseModel
         $url = $this->url;
         $parameters = $this->parameters ?? [];
 
-        return trim(sprintf("%s?%s", $url,
-            http_build_query(array_combine(
-                    Arr::pluck($parameters, 'key'),
-                    Arr::pluck($parameters, 'value'))
-            )), '?');
+        return trim(sprintf(
+            "%s?%s",
+            $url,
+            http_build_query(
+                array_combine(
+                Arr::pluck($parameters, 'key'),
+                Arr::pluck($parameters, 'value')
+            )
+            )
+        ), '?');
     }
 
     /**
@@ -80,7 +86,7 @@ class Link extends BaseModel
             ->whereNull('link_id')
             ->lockForUpdate()->first();
 
-        if (!$urlCode) {
+        if (! $urlCode) {
             $urlCode = Shortener::generateCodeForLink($this);
         } else {
             $urlCode->update([

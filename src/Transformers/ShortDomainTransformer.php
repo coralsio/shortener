@@ -28,7 +28,7 @@ class ShortDomainTransformer extends BaseTransformer
             'status' => formatStatusAsLabels($shortDomain->status),
             'created_at' => format_date($shortDomain->created_at),
             'updated_at' => format_date($shortDomain->updated_at),
-            'action' => $this->actions($shortDomain)
+            'action' => $this->actions($shortDomain),
         ];
 
         return parent::transformResponse($transformedArray);

@@ -27,7 +27,8 @@ class ShortDomainsTest extends TestCase
     public function test_short_domains_store()
     {
         $base_url = 'https://short-domains';
-        $response = $this->post('shortener/short-domains',
+        $response = $this->post(
+            'shortener/short-domains',
             [
                 'title' => 'short-domains',
                 'base_url' => $base_url,
@@ -78,7 +79,7 @@ class ShortDomainsTest extends TestCase
             $response = $this->put('shortener/short-domains/' . $this->shortDomain->hashed_id, [
                 'title' => $this->shortDomain->title,
                 'base_url' => $this->shortDomain->base_url,
-                'status' => $this->shortDomain->status
+                'status' => $this->shortDomain->status,
             ]);
 
             $response->assertRedirect('shortener/short-domains');

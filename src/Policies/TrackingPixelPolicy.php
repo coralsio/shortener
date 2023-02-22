@@ -19,6 +19,7 @@ class TrackingPixelPolicy extends BasePolicy
         if ($user->can('Shortener::tracking_pixel.view')) {
             return true;
         }
+
         return false;
     }
 
@@ -41,6 +42,7 @@ class TrackingPixelPolicy extends BasePolicy
         if ($user->can('Shortener::tracking_pixel.update')) {
             return true;
         }
+
         return false;
     }
 
@@ -54,7 +56,7 @@ class TrackingPixelPolicy extends BasePolicy
         if ($user->can('Shortener::tracking_pixel.delete')) {
             return true;
         }
+
         return false;
     }
-
 }

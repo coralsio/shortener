@@ -11,10 +11,10 @@ class GenerateCodes extends Command
     protected $signature = 'shortener:generate-codes {count=100000}';
     protected $description = 'Generate short urls codes';
 
-    const URL_CODES_TABLE = 'shortener_url_codes';
-    const CODE_COLUMN = 'code';
-    const CODE_LENGTH = 5;
-    const BATCH_COUNT = 500;
+    public const URL_CODES_TABLE = 'shortener_url_codes';
+    public const CODE_COLUMN = 'code';
+    public const CODE_LENGTH = 5;
+    public const BATCH_COUNT = 500;
 
     public function handle()
     {
@@ -43,8 +43,9 @@ class GenerateCodes extends Command
                 $notInBatch = array_search($code, array_column($codesBatch, self::CODE_COLUMN)) === false;
 
                 if ($notInBatch
-                    && !DB::table(self::URL_CODES_TABLE)->where(self::CODE_COLUMN, $code)->exists()) {
+                    && ! DB::table(self::URL_CODES_TABLE)->where(self::CODE_COLUMN, $code)->exists()) {
                     $data[self::CODE_COLUMN] = $code;
+
                     break;
                 }
             }

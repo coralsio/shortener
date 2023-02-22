@@ -33,8 +33,10 @@ class TrackingPixelRequest extends BaseRequest
             $rules = array_merge($rules, [
                 'status' => 'required',
                 'short_domain_id' => 'nullable|exists:shortener_short_domains,id',
-                'provider' => 'required|in:' . implode(',',
-                        array_keys(config('shortener.models.tracking_pixel.providers'))),
+                'provider' => 'required|in:' . implode(
+                    ',',
+                    array_keys(config('shortener.models.tracking_pixel.providers'))
+                ),
                 'head_script' => '',
                 'body_script' => '',
             ]);

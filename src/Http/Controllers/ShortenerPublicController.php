@@ -13,7 +13,7 @@ class ShortenerPublicController extends PublicBaseController
     {
         $link = Link::findByCode($code);
 
-        if (!$link->show_splash_page) {
+        if (! $link->show_splash_page) {
             return redirect()->to($link->full_url);
         }
 

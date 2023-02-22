@@ -30,7 +30,7 @@ class TrackingPixelTransformer extends BaseTransformer
             'status' => formatStatusAsLabels($trackingPixel->status),
             'created_at' => format_date($trackingPixel->created_at),
             'updated_at' => format_date($trackingPixel->updated_at),
-            'action' => $this->actions($trackingPixel)
+            'action' => $this->actions($trackingPixel),
         ];
 
         return parent::transformResponse($transformedArray);

@@ -64,14 +64,14 @@ class LinksDataTable extends BaseDataTable
                 'class' => 'col-md-2',
                 'type' => 'text',
                 'condition' => 'like',
-                'active' => true
+                'active' => true,
             ],
             'alias' => [
                 'title' => trans('Shortener::attributes.link.alias'),
                 'class' => 'col-md-2',
                 'type' => 'text',
                 'condition' => 'like',
-                'active' => true
+                'active' => true,
             ],
         ];
     }

@@ -46,12 +46,12 @@ class ImpressionsDataTable extends BaseDataTable
             'url' => [
                 'title' => trans('Shortener::attributes.link.url'),
                 'searchable' => false,
-                'orderable' => false
+                'orderable' => false,
             ],
             'alias' => [
                 'title' => trans('Shortener::attributes.link.alias'),
                 'searchable' => false,
-                'orderable' => false
+                'orderable' => false,
             ],
             'ip_address' => ['title' => trans('Shortener::attributes.impression.ip_address')],
             'browser' => ['title' => trans('Shortener::attributes.impression.browser')],
@@ -75,35 +75,35 @@ class ImpressionsDataTable extends BaseDataTable
                 'class' => 'col-md-2',
                 'type' => 'text',
                 'condition' => 'like',
-                'active' => true
+                'active' => true,
             ],
             'link.alias' => [
                 'title' => trans('Shortener::attributes.link.alias'),
                 'class' => 'col-md-2',
                 'type' => 'text',
                 'condition' => 'like',
-                'active' => true
+                'active' => true,
             ],
             'browser' => [
                 'title' => trans('Shortener::attributes.impression.browser'),
                 'class' => 'col-md-2',
                 'type' => 'text',
                 'condition' => 'like',
-                'active' => true
+                'active' => true,
             ],
             'platform' => [
                 'title' => trans('Shortener::attributes.impression.platform'),
                 'class' => 'col-md-2',
                 'type' => 'text',
                 'condition' => 'like',
-                'active' => true
+                'active' => true,
             ],
             'ip_address' => [
                 'title' => trans('Shortener::attributes.impression.ip_address'),
                 'class' => 'col-md-2',
                 'type' => 'text',
                 'condition' => 'like',
-                'active' => true
+                'active' => true,
             ],
         ];
     }

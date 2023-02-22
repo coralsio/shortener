@@ -9,14 +9,14 @@ use Illuminate\Support\Str;
 
 class Shortener
 {
-    const URL_CODES_TABLE = 'shortener_url_codes';
-    const CODE_COLUMN = 'code';
-    const CODE_LENGTH = 5;
+    public const URL_CODES_TABLE = 'shortener_url_codes';
+    public const CODE_COLUMN = 'code';
+    public const CODE_LENGTH = 5;
 
     /**
      * Shortener constructor.
      */
-    function __construct()
+    public function __construct()
     {
     }
 
@@ -43,7 +43,7 @@ class Shortener
         foreach (range(1, 100) as $index) {
             $code = Str::random(self::CODE_LENGTH);
 
-            if (!DB::table(self::URL_CODES_TABLE)->where(self::CODE_COLUMN, $code)->exists()) {
+            if (! DB::table(self::URL_CODES_TABLE)->where(self::CODE_COLUMN, $code)->exists()) {
                 $data[self::CODE_COLUMN] = $code;
 
                 return UrlCode::query()->create(array_merge([

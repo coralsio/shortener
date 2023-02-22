@@ -49,8 +49,11 @@ class LinksController extends APIBaseController
     {
         try {
             $link = $this->linkService->store($request, Link::class);
-            return apiResponse($this->linkService->getModelDetails(),
-                trans('Corals::messages.success.created', ['item' => $link->name]));
+
+            return apiResponse(
+                $this->linkService->getModelDetails(),
+                trans('Corals::messages.success.created', ['item' => $link->name])
+            );
         } catch (\Exception $exception) {
             return apiExceptionResponse($exception);
         }
@@ -64,7 +67,6 @@ class LinksController extends APIBaseController
     public function show(LinkRequest $request, $linkCode)
     {
         try {
-
             $link = Link::query()->where('code', $linkCode)->firstOrFail();
 
             return apiResponse($this->linkService->getModelDetails($link));
@@ -83,8 +85,10 @@ class LinksController extends APIBaseController
         try {
             $this->linkService->update($request, $link);
 
-            return apiResponse($this->linkService->getModelDetails(),
-                trans('Corals::messages.success.updated', ['item' => $link->name]));
+            return apiResponse(
+                $this->linkService->getModelDetails(),
+                trans('Corals::messages.success.updated', ['item' => $link->name])
+            );
         } catch (\Exception $exception) {
             return apiExceptionResponse($exception);
         }

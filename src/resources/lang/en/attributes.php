@@ -27,7 +27,7 @@ return [
         'device' => 'Device',
         'platform' => 'Platform',
         'platform_version' => 'Platform version',
-        'languages' => 'Languages'
+        'languages' => 'Languages',
     ],
     'tracking_pixel' => [
         'name' => 'Name',
@@ -37,5 +37,5 @@ return [
         'head_script_help' => 'script placed before closing of the <head> tag',
         'body_script' => '<body> script',
         'body_script_help' => 'script placed after the opening of the <body> tag',
-    ]
+    ],
 ];

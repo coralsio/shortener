@@ -6,7 +6,6 @@ use Corals\Foundation\Transformers\FractalPresenter;
 
 class TrackingPixelPresenter extends FractalPresenter
 {
-
     /**
      * @param array $extras
      * @return LinkTransformer|\League\Fractal\TransformerAbstract

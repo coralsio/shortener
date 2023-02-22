@@ -45,7 +45,7 @@ class TrackingPixelsController extends BaseController
         $trackingPixel = new TrackingPixel();
 
         $this->setViewSharedData([
-            'title_singular' => trans('Corals::labels.create_title', ['title' => $this->title_singular])
+            'title_singular' => trans('Corals::labels.create_title', ['title' => $this->title_singular]),
         ]);
 
         return view('Shortener::trackingPixels.create_edit')->with(compact('trackingPixel'));
@@ -91,7 +91,7 @@ class TrackingPixelsController extends BaseController
     public function edit(TrackingPixelRequest $request, TrackingPixel $trackingPixel)
     {
         $this->setViewSharedData([
-            'title_singular' => trans('Corals::labels.update_title', ['title' => $trackingPixel->getIdentifier('name')])
+            'title_singular' => trans('Corals::labels.update_title', ['title' => $trackingPixel->getIdentifier('name')]),
         ]);
 
         return view('Shortener::trackingPixels.create_edit')->with(compact('trackingPixel'));
@@ -127,7 +127,7 @@ class TrackingPixelsController extends BaseController
 
             $message = [
                 'level' => 'success',
-                'message' => trans('Corals::messages.success.deleted', ['item' => $this->title_singular])
+                'message' => trans('Corals::messages.success.deleted', ['item' => $this->title_singular]),
             ];
         } catch (\Exception $exception) {
             log_exception($exception, TrackingPixel::class, 'destroy');

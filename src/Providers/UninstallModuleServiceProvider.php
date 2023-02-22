@@ -9,7 +9,7 @@ use Corals\Modules\Shortener\database\seeds\ShortenerDatabaseSeeder;
 class UninstallModuleServiceProvider extends BaseUninstallModuleServiceProvider
 {
     protected $migrations = [
-        ShortenerTables::class
+        ShortenerTables::class,
     ];
 
     protected function providerBooted()

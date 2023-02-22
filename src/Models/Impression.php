@@ -8,7 +8,8 @@ use Spatie\Activitylog\Traits\LogsActivity;
 
 class Impression extends BaseModel
 {
-    use PresentableTrait, LogsActivity;
+    use PresentableTrait;
+    use LogsActivity;
 
     /**
      *  Model configuration.
@@ -20,7 +21,7 @@ class Impression extends BaseModel
 
     protected $casts = [
         'properties' => 'json',
-        'languages' => 'json'
+        'languages' => 'json',
     ];
 
     protected $guarded = ['id'];

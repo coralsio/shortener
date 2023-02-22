@@ -7,7 +7,7 @@ use Corals\Settings\Models\Setting;
 use Corals\User\Models\Permission;
 use Corals\User\Models\Role;
 use Illuminate\Database\Seeder;
-use \Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class ShortenerDatabaseSeeder extends Seeder
 {

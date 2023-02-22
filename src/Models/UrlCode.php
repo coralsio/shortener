@@ -9,7 +9,8 @@ use Spatie\Activitylog\Traits\LogsActivity;
 
 class UrlCode extends BaseModel
 {
-    use PresentableTrait, LogsActivity;
+    use PresentableTrait;
+    use LogsActivity;
 
     /**
      *  Model configuration.
@@ -32,7 +33,6 @@ class UrlCode extends BaseModel
     {
         return $this->belongsTo(Link::class);
     }
-
 
     /**
      * @return BelongsTo

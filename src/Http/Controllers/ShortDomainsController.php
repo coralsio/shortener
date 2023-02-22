@@ -45,7 +45,7 @@ class ShortDomainsController extends BaseController
         $shortDomain = new ShortDomain();
 
         $this->setViewSharedData([
-            'title_singular' => trans('Corals::labels.create_title', ['title' => $this->title_singular])
+            'title_singular' => trans('Corals::labels.create_title', ['title' => $this->title_singular]),
         ]);
 
         return view('Shortener::shortDomains.create_edit')->with(compact('shortDomain'));
@@ -91,7 +91,7 @@ class ShortDomainsController extends BaseController
     public function edit(ShortDomainRequest $request, ShortDomain $shortDomain)
     {
         $this->setViewSharedData([
-            'title_singular' => trans('Corals::labels.update_title', ['title' => $shortDomain->getIdentifier('title')])
+            'title_singular' => trans('Corals::labels.update_title', ['title' => $shortDomain->getIdentifier('title')]),
         ]);
 
         return view('Shortener::shortDomains.create_edit')->with(compact('shortDomain'));
@@ -127,7 +127,7 @@ class ShortDomainsController extends BaseController
 
             $message = [
                 'level' => 'success',
-                'message' => trans('Corals::messages.success.deleted', ['item' => $this->title_singular])
+                'message' => trans('Corals::messages.success.deleted', ['item' => $this->title_singular]),
             ];
         } catch (\Exception $exception) {
             log_exception($exception, ShortDomain::class, 'destroy');

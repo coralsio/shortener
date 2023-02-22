@@ -9,6 +9,7 @@ use Corals\User\Models\User;
 class LinkPolicy extends BasePolicy
 {
     protected $administrationPermission = 'Administrations::admin.shortener';
+
     /**
      * @param User $user
      * @return bool
@@ -18,6 +19,7 @@ class LinkPolicy extends BasePolicy
         if ($user->can('Shortener::link.view')) {
             return true;
         }
+
         return false;
     }
 
@@ -40,6 +42,7 @@ class LinkPolicy extends BasePolicy
         if ($user->can('Shortener::link.update')) {
             return true;
         }
+
         return false;
     }
 
@@ -53,7 +56,7 @@ class LinkPolicy extends BasePolicy
         if ($user->can('Shortener::link.delete')) {
             return true;
         }
+
         return false;
     }
-
 }

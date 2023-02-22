@@ -6,7 +6,6 @@ use Corals\Foundation\Transformers\FractalPresenter;
 
 class LinkPresenter extends FractalPresenter
 {
-
     /**
      * @return LinkTransformer
      */

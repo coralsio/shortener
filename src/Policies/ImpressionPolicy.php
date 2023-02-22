@@ -21,6 +21,7 @@ class ImpressionPolicy extends BasePolicy
         if ($user->can('Shortener::impression.view')) {
             return true;
         }
+
         return false;
     }
 
@@ -44,6 +45,7 @@ class ImpressionPolicy extends BasePolicy
         if ($user->can('Shortener::impression.update')) {
             return true;
         }
+
         return false;
     }
 
@@ -57,7 +59,7 @@ class ImpressionPolicy extends BasePolicy
         if ($user->can('Shortener::impression.delete')) {
             return true;
         }
+
         return false;
     }
-
 }

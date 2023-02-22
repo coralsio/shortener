@@ -42,7 +42,7 @@ class ImpressionTransformer extends BaseTransformer
 
             'created_at' => format_date_time($impression->created_at),
             'updated_at' => format_date($impression->updated_at),
-            'action' => $this->actions($impression)
+            'action' => $this->actions($impression),
         ];
 
         return parent::transformResponse($transformedArray);

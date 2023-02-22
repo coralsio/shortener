@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-
 Route::get('l/{code}', 'ImpressionsController@click');
 
 Route::get('s/{code}', 'ShortenerPublicController@splashPage');
