@@ -54,9 +54,9 @@ class Link extends BaseModel
             $url,
             http_build_query(
                 array_combine(
-                Arr::pluck($parameters, 'key'),
-                Arr::pluck($parameters, 'value')
-            )
+                    Arr::pluck($parameters, 'key'),
+                    Arr::pluck($parameters, 'value')
+                )
             )
         ), '?');
     }
