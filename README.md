@@ -1,6 +1,6 @@
 # Corals Shortener
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+Laraship Laravel URL shortener is a very cool module where you can create short URL versions of your links, whether they are under Laraship or any external links.
 
 ## Installation
 
